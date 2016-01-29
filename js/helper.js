@@ -60,6 +60,25 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
+//var HTMLmodal = "<div id="visualization" class='modal-content'></div>";
+var HTMLmodal = '<div id="visModal" class="modal fade" role="dialog">';
+    HTMLmodal += '<div class="modal-dialog">';
+    HTMLmodal += '<div class="modal-content">';
+    HTMLmodal += '<div class="modal-header">';
+    HTMLmodal += '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+    HTMLmodal += '<h4 class="modal-title">Modal Header</h4>';
+    HTMLmodal += '</div>';
+    HTMLmodal += '<div class="modal-body">';
+    HTMLmodal += '<p>Some text in the modal.</p>';
+    HTMLmodal += '<div id="visualization"></div>';
+    HTMLmodal += '</div>';
+    HTMLmodal += '<div class="modal-footer">';
+    HTMLmodal += '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>';
+    HTMLmodal += '</div></div></div></div>';
+
+
+//var HTMLmodal = '<div id="timeline" class="row col-lg-12">Hi there</div>';
+
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
