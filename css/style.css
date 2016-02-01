@@ -90,6 +90,7 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+  overflow: hidden;
 }
 
 .welcome-message {
@@ -223,7 +224,6 @@ span {
 
 
 .hidden-inline-xs {
-  //display: inline !important;
   display: inline
 }
 
@@ -236,21 +236,19 @@ span {
 
 
 #timelineContent {
-    padding: 15px;
-    display: block;
+  padding: 15px;
+  display: block;
 }
 
-
 #menu {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    z-index: 9999;
+  position: relative;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 9999;
 }
 
 .vis-timeline {
   background-color: #F0F0F0;
   margin: 10px;
 }
-
