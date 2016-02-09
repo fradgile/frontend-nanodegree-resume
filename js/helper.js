@@ -112,7 +112,6 @@ var map; // declares a global map variable
 Start here! initializeMap() is called when page is loaded.
 */
 function initializeMap() {
-<<<<<<< HEAD
     var locations;
 
     var mapOptions = {
@@ -156,75 +155,7 @@ function initializeMap() {
 
         return locations;
     }
-||||||| merged common ancestors
 
-  var locations;
-
-  var mapOptions = {
-    disableDefaultUI: true
-  };
-
-  /* 
-  For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js. 
-  */
-  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
-
-  /*
-  locationFinder() returns an array of every location string from the JSONs
-  written for bio, education, and work.
-  */
-  function locationFinder() {
-
-    // initializes an empty array
-    var locations = [];
-
-    // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
-
-    // iterates through school locations and appends each location to
-    // the locations array
-    for (var school in education.schools) {
-      locations.push(education.schools[school].location);
-    }
-=======
-
-  var locations;
-
-  var mapOptions = {
-    disableDefaultUI: true
-  };
-
-  /* 
-  For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js. 
-  */
-  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
-
-  /*
-  locationFinder() returns an array of every location string from the JSONs
-  written for bio, education, and work.
-  */
-  function locationFinder() {
-
-    // initializes an empty array
-    var locations = [];
-
-    // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
-
-    // iterates through school locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide: 
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
-      locations.push(school.location);
-    });
->>>>>>> 9aa8217fd2624b5dadfef37fd92e75762343da0f
-
-<<<<<<< HEAD
     /*
     createMapMarker(placeData) reads Google Places search results to create map pins.
     placeData is the object returned from search results containing information
@@ -267,21 +198,6 @@ function initializeMap() {
         // center the map
         map.setCenter(bounds.getCenter());
     }
-||||||| merged common ancestors
-    // iterates through work locations and appends each location to
-    // the locations array
-    for (var job in work.jobs) {
-      locations.push(work.jobs[job].location);
-    }
-=======
-    // iterates through work locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide: 
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    work.jobs.forEach(function(job){
-      locations.push(job.location);
-    });
->>>>>>> 9aa8217fd2624b5dadfef37fd92e75762343da0f
 
     /*
     callback(results, status) makes sure the search returned results for a location.
@@ -303,7 +219,6 @@ function initializeMap() {
         // actually searching for location data.
         var service = new google.maps.places.PlacesService(map);
 
-<<<<<<< HEAD
         // Iterates through the array of locations, creates a search object for each location
         locations.forEach(function(place) {
 
@@ -311,40 +226,10 @@ function initializeMap() {
             var request = {
                 query: place
             };
-||||||| merged common ancestors
-    // Iterates through the array of locations, creates a search object for each location
-    for (var place in locations) {
 
-      // the search request object
-      var request = {
-        query: locations[place]
-      };
-=======
-    // Iterates through the array of locations, creates a search object for each location
-      locations.forEach(function(place){
-      // the search request object
-      var request = {
-        query: place
-      };
->>>>>>> 9aa8217fd2624b5dadfef37fd92e75762343da0f
-
-<<<<<<< HEAD
             // Actually searches the Google Maps API for location data and runs the callback
             // function with the search results after each search.
             service.textSearch(request, callback);
-||||||| merged common ancestors
-      // Actually searches the Google Maps API for location data and runs the callback
-      // function with the search results after each search.
-      service.textSearch(request, callback);
-    }
-  }
-=======
-      // Actually searches the Google Maps API for location data and runs the callback
-      // function with the search results after each search.
-      service.textSearch(request, callback);
-    });
-  }
->>>>>>> 9aa8217fd2624b5dadfef37fd92e75762343da0f
 
         });
     }
